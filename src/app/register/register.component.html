@@ -1,0 +1,122 @@
+<!--<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 p-4 shadow rounded">
+      <h2>Register Form</h2>
+      <form [formGroup]="userForm" (ngSubmit)="register()">
+        <div class="form-group mt-3">
+          <label for="username">Username</label>
+          <input type="text"  required class="form-control" formControlName="uname" >-->
+<!--<span appUser *ngIf="uname.touched && !uname.valid">
+  Username cannot be empty
+</span>-->
+<!--</div>
+<div class="form-group mt-3">
+  <label for="password">Password</label>
+  <input type="password"  required class="form-control" formControlName="pwd" >
+  <span *ngIf="pwd.invalid">
+    {{pwd.errors |json}}
+  </span>-->
+<!--<span *ngIf="pwd.touched && !pwd.valid" appUser>
+  Password cannot be empty
+</span>
+<br />
+<span *ngIf="pwd.errors?.['minlength']" appUser>
+  Password should be 6 letters long
+</span>-->
+<!--</div>
+<div class="form-group mt-3">
+  <label for="rePassword">Repeat Password</label>
+  <input type="password" required class="form-control" formControlName="rpwd" minlength="6">-->
+<!--<span *ngIf="rpwd.touched && !rpwd.valid" appUser>
+  Re-Password cannot be empty
+</span>
+<br />
+<span *ngIf="rpwd.errors?.['minlength']" appUser>
+  Password should be 6 letters long
+</span>-->
+<!--</div>
+        <div class="form-group mt-3">
+          <button class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>-->
+<!--<form [formGroup]="registerForm" (ngSubmit)="register()">
+  <table>
+    <tr>
+      <td>Username</td>
+      <td><input type="text" formControlName="username"></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><input type="text" [value]="encodedPass" formControlName="password" (blur)="encodePass()"></td>
+      <span *ngIf="password.invalid">
+        {{password.errors |json}}
+      </span>
+    </tr>
+    <tr>
+      <td>Re-Type Password</td>
+      <td><input type="password" formControlName="rePass"></td>
+    </tr>
+    <tr>
+      <td>
+        <button class="btn btn-success">Register</button>
+      </td>
+      <td>
+        <button class="btn btn-danger">Cancel</button>
+      </td>
+    </tr>
+  </table>
+
+</form>-->
+
+
+
+<section class="loginSec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 loginPage pt-5">
+
+        <div class="loginInner">
+          <h2 class="text-center">Register</h2>
+          <form [formGroup]="registerForm" (ngSubmit)="RegUser()">
+            <div class="mt-3">
+              <label class="">User<span class="text-danger">*</span></label>
+              <div class="input-group mt-2">
+                <span class="input-group-text"><i class="fa-regular fa-user"></i></span>
+                <input type="text" class="form-control" formControlName="username" />
+                <span *ngIf="username.touched && !username.valid" class="danger"
+                      appErrorColor appErrorclr="2">
+                  Please Enter User Name
+                </span>
+              </div>
+            </div>
+            <div class="mt-3">
+              <label class="">Password <span class="text-danger">*</span></label>
+              <div class="input-group mt-2">
+                <span class="input-group-text"><i class="fa-sharp fa-solid fa-lock"></i></span>
+                <input type="password" class="form-control" formControlName="password" />
+                <span *ngIf="password.touched && !password.valid" class="danger">
+                  <span *ngIf="password.errors['required']">
+                    Please Enter Password
+                  </span> 
+                </span>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="text-end">
+                <div class="form-group">
+                  <button type="submit" class="btn btn1">Login </button>
+                </div>
+
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

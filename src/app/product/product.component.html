@@ -1,0 +1,15 @@
+<div class=" col-sm-4 alert alert success" *ngIf="checkQuanity()>0">
+  <div class="card" style="width: 18rem;">
+    <img [src]="product.pic" alt="NO image" height="200" width="200">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name | uppercase }}</h5>
+      <p class="card-text">{{product.price | currency : 'INR'}}</p>
+      <p class="card-text">{{product.quantity}}</p>
+      <a href="#" class="btn btn-primary" (click)="buyPizza()">Add to Cart</a>
+    </div>
+  </div>
+ <!-- {{dob | date : 'dd-MMM-yyyy'}}-->
+</div>
+<div appShowchange>
+  {{product | json}}
+</div>

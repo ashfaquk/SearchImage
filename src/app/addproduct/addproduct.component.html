@@ -1,0 +1,18 @@
+<p>addproduct works!</p>
+<div>
+
+  <label class="form-control">Product id</label>
+  <input type="text" [(ngModel)]="product.id"  class="form-control">
+  <label class="form-control">Product Name</label>
+  <input type="text" [(ngModel)]="product.name" required class="form-control" >
+ 
+  <label class="form-control">Product Price</label>
+  <input type="number" [(ngModel)]="product.price" required class="form-control">
+  
+  <label class="form-control">Product Quantity</label>
+  <input type="number" [(ngModel)]="product.quantity" class="form-control">
+   
+  <label class="form-control">Product images</label>
+  <input type="file" id="img" [(ngModel)]="product.pic" accept="image/*">
+  <button class="btn btn-warning" (click)="addprodt()">add product</button>
+</div>

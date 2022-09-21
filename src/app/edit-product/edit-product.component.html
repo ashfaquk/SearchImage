@@ -1,0 +1,47 @@
+<p>edit-product works!</p>
+<div>
+  <select (change)="getProduct(pid.value)" #pid>
+    <option >--Select---</option>
+    <option *ngFor="let p of products" [value]="p.id"> {{p.id}}</option>
+  </select>
+  <div *ngIf="product?.id">
+    <label class="form-control">Product Name</label>
+    <input type="text" [(ngModel)]="product.name" required class="form-control" #pname="ngModel" minlength="5">
+    <div *ngIf="pname.invalid && (pname.dirty || pname.touched)"
+         class="alert alert-danger">
+
+      <div *ngIf="pname.errors?.['required']">
+        Name is required.
+      </div>
+      <div *ngIf="pname.errors?.['minlength']">
+        Name must be at least 4 characters long.
+      </div>
+    </div>
+    <label class="form-control">Product Price</label>
+    <input type="number" [(ngModel)]="product.price" required class="form-control" #price="ngModel" minlength="1">
+    <div *ngIf="price.invalid && (price.dirty || price.touched)"
+         class="alert alert-danger">
+
+      <div *ngIf="price.errors?.['required']">
+        price is required.
+      </div>
+      <div *ngIf="price.errors?.['minlength']">
+        price has to be positive
+      </div>
+    </div>
+    <label class="form-control">Product Quantity</label>
+    <input type="number" [(ngModel)]="product.quantity" class="form-control" #qty="ngModel">
+    <div *ngIf="qty.invalid && (qty.dirty || qty.touched)"
+         class="alert alert-danger">
+
+      <div *ngIf="qty.errors?.['required']">
+        price is required.
+      </div>
+      <div *ngIf="qty.errors?.['minlength']">
+        price has to be positive
+      </div>
+    </div>
+    <button class="btn btn-warning"   (click)="updateProduct()">Update</button>
+  </div>
+  </div>
+

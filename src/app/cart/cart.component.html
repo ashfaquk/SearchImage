@@ -1,0 +1,33 @@
+<p>cart works!</p>
+<table>
+  <tr>
+    <td>
+      Product Id
+    </td>
+    <td>
+      Product name
+    </td>
+    <td>
+      Price
+    </td>
+    <td>
+      Quantity
+    </td>
+    <td>
+      Image
+    </td>
+  </tr>
+  <tr *ngFor="let product of cart">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.quantity}}</td>
+    <td><img [src]="product.pic" alt="NO image" height="200" width="200"></td>
+    <td></td>
+
+  </tr>
+</table>
+<button class="btn btn-success" (click)="showPayment()">Confirm</button>
+<div *ngIf="show">
+  <app-payment></app-payment>
+</div>

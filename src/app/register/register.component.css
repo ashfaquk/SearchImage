@@ -1,0 +1,27 @@
+
+.loginInner {
+  background: #ffffff;
+  box-shadow: 0 0 10px #ccc;
+  border-radius: 5px;
+  padding: 30px;
+  margin-bottom: 103px;
+}
+
+  .loginInner h2 {
+    font-weight: 600;
+    padding-bottom: 20px;
+  }
+
+  .loginInner .btn1 {
+    background: #1c2654;
+    color: #fff;
+    width: 100%;
+    box-shadow: 0px 2px 5px 0px #1c2654;
+    margin-top: 20px;
+  }
+
+  .loginInner .input-group-text {
+    color: #fff;
+    background-color: #1c2654;
+    border: 1px solid #1c2654;
+  }

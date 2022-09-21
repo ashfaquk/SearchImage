@@ -1,0 +1,27 @@
+<p>searchimage works!</p>
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-2"> Search: </div>
+    <div class="col-md-4 "><input type="text" class="form-control" [(ngModel)]="keywordsrc"></div>
+    <div class="col-md-6">
+      <button class="btn btn-success form-control"
+              height="20px" id="searchimg" (click)="SearchImg()">
+        Search images
+      </button>
+    </div>
+  </div>
+  <br />
+
+  <div *ngIf="serachimages.length!=0">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let imgsr of serachimages" style=" height: 200px; overflow: hidden;">
+        <img [src]="imgsr.webformatURL" class="img-fluid mt-4" width="100%">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <!-- {{searchimage[0]|json}} -->
+</div>
